@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "HomeStream",
+    "version": "1.0",
+    "description": "L'extension qui te permet de sauvegarder un film ou une série en tête",
+    "permissions": [
+      "storage",
+      "activeTab",
+      "tabs",
+      "http://82.67.36.31:5055/api/v1/search/tmdb"
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+      }
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self'"
+    }
+  }
+  
